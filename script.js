@@ -12,16 +12,18 @@ function validate(){
   var a3 = /.+/.test((wish.value));
   var a = [a1, a2, a3],
       b = [name, mail, wish];
+      c = [document.getElementById('frsthdn'), document.getElementById('scnhdn'), document.getElementById('trdhdn')];
       if (validationcheck(a)) { addRow(); }
   for(var i=0, len=a.length; i < len; i++){
-    if (a[i] === false) { warning(b[i]); } else { normal(b[i]); }
+    if (!a[i]) { warning(b[i],c[i]);     
+    } else { normal(b[i],c[i]); }
   }
 }
 
 function validationcheck(arr){
  
     for(var i=0, len=arr.length; i < len; i++){
-      if (arr[i] === false) { return false; } 
+      if (!arr[i]) { return false; } 
     }
     return true;
 }
@@ -40,10 +42,12 @@ function addRow(){
 }
 
     
-function normal(elemId){
+function normal(elemId, hintId){
     elemId.style.border = '1px solid black';   
+    hintId.hidden = true;
 }
 
-function warning(elemId){
+function warning(elemId, hintId){
     elemId.style.border = '1px solid red';   
+    hintId.hidden = false;
 }
