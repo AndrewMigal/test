@@ -12,7 +12,7 @@ function validate(){
   var a3 = /.+/.test((wish.value));
   var a = [a1, a2, a3],
       b = [name, mail, wish];
-      c = [document.getElementById('frsthdn'), document.getElementById('scnhdn'), document.getElementById('trdhdn')];
+      c = [document.getElementById('namehdn'), document.getElementById('mailhdn'), document.getElementById('texthdn')];
       if (validationcheck(a)) { addRow(); }
   for(var i=0, len=a.length; i < len; i++){
     if (!a[i]) { warning(b[i],c[i]);     
