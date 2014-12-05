@@ -22,9 +22,21 @@ input[type=text], textarea {
     border-style: solid;
     border-color: black;
     border-width: 1px;
+    display: inline-block;
+    float: left;
+    margin-bottom: 3px;
 }
 
 .hdn {
   font-size: 8pt;
   color: red;
 }
+
+.lbl{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 258px;
+    text-align: right;
+}
+

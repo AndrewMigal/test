@@ -13,17 +13,17 @@
  
   <fieldset>
    <legend>Додати побажання</legend>
-      <p align="right"><label for="name">Iм"я:</label> 
+     <label for="name" class="lbl">Iм"я:</label> 
 	 <input id="name" type="text" size="40">
-      </p>
+    
       <p hidden id="namehdn" align="right" class="hdn">*Имя должно содержать не менее 3 букв</p>
-       <p align="right"><label for="mail">E-mail:</label>
+      <label for="mail" class="lbl">E-mail:</label>
 	 <input id="mail" type="text" size="40">
-      </p>
+     
        <p hidden id="mailhdn" align="right" class="hdn">*EMail должен быть введен корректно</p>
-      <label for="wish">Побажання:
+      <label for="wish">Побажання: </label>
        <textarea id="wish" name="comment" cols="80" rows="3"></textarea>      
-      </label>
+      
        <p hidden id="texthdn" align="right" class="hdn">*Это поле должно быть не пустое</p>
      <input id="addButton" type="button" value="Додати" onclick="someFunc()" style="float: right;" >
   </fieldset>
